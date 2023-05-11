@@ -1,0 +1,3 @@
+java -jar ../gp.jar --uninstall classes/PQC_package/javacard/PQC_package.cap
+java -jar ../gp.jar -install classes/PQC_package/javacard/PQC_package.cap
+

@@ -1,0 +1,5 @@
+#!/bin/sh
+rm -r -f classes/PQC_package
+
+javac src/PQC_package/PQCTest.java -cp /home/edgars/java_card_tools-win-bin-b_17-06_jul_2021/lib/api_classic-3.0.4.jar -d classes -g -source 1.7 -target 1.7
+

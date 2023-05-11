@@ -1,0 +1,11 @@
+#!/bin/sh
+
+rm -r -f classes/PQC_package
+javac src/PQC_package/PQCTest.java -cp /home/edgars/java_card_tools-win-bin-b_17-06_jul_2021/lib/api_classic-3.0.4.jar -d classes -g -source 1.7 -target 1.7
+
+rm -r -f classes/PQC_package/javacard
+/home/edgars/java_card_tools-win-bin-b_17-06_jul_2021/bin/converter.sh -target 3.0.4 -classdir classes -applet 0xa2:0xb2:0xc2:0xd2:0xe2 PQCTest PQC_package 0xa2:0xb2:0xc2:0xd2:0xe2:0xf2 1.0
+
+java -jar ../gp.jar --uninstall classes/PQC_package/javacard/PQC_package.cap
+java -jar ../gp.jar -install classes/PQC_package/javacard/PQC_package.cap
+
